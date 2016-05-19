@@ -3,7 +3,11 @@ RUN apt-get update
 RUN apt-get install sudo
 RUN cpanm Sparrow
 RUN sparrow index update
+RUN sparrow index summary
 RUN sparrow plg install gitprep
 RUN sparrow plg run gitprep
-ENTRYPOINT ["sparrow"]
+RUN sparrow index update
+RUN sparrow index summary
+RUN sudo sparrow plg list
+CMD sparrow plg run gitprep --param action=start --param start_mode=foreground
 
