@@ -1,6 +1,6 @@
 # SYNOPSIS
 
-Builds docker image with GitPrep server installed
+Builds docker image with GitPrep server installed.
 
 
 # USAGE
@@ -13,4 +13,12 @@ Builds docker image with GitPrep server installed
 
     # run gitprep server
     $ sudo docker run -p 10020:10020 -d -i melezhik/gitprep
+
+    # test it!
+    curl 127.0.0.1:10020
+
+# AUTHOR
+
+[Alexey Melezhik](mailto:melezhik@gmail.com)
+
 
