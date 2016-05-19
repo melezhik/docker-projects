@@ -6,8 +6,5 @@ RUN sparrow index update
 RUN sparrow index summary
 RUN sparrow plg install gitprep
 RUN sparrow plg run gitprep
-RUN sparrow index update
-RUN sparrow index summary
-RUN sudo sparrow plg list
 CMD sparrow plg run gitprep --param action=start --param start_mode=foreground
 
